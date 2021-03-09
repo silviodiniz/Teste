@@ -1,0 +1,29 @@
+CREATE TABLE number (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    
+  PRIMARY KEY (id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+CREATE TABLE comment (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  title VARCHAR(440),
+     
+  PRIMARY KEY (id),
+  FOREIGN KEY (number) 
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+INSERT INTO number 
+    (id) 
+VALUES
+    (1),
+    (2),
+    (3);
+
+INSERT INTO comment 
+    (id, text) 
+VALUES
+    (1, 'Pandemia de Covid19 no Brasil está fora de controle'),
+    (2, 'Os números de casos e de mortes aumentam, mais e mais, a cada dia.'),
+    (3, 'O governo federal, totalmente negacionista, não toma a frente para coordenação geral da crise de saúde.'),
+    (4, 'De um lado sofrem os doentes e seus familiares e do outro a economia, totalmente paralizada.'),
+    (5, 'Além disso, para completar o caos total, o ritmo da vacinação caminha a passos muito lentos!');
